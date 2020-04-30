@@ -1,5 +1,9 @@
 import React from 'react'
 
+const mayorDeEdad = edad => edad > 18
+
+const persona = {"nombre": "Juan Manuel", "apellido": "Pérez", "edad": 30}
+
 const Curso = () => (
     <article className="card">
         <div className="img-container s-ratio-16-9 s-radius-tr s-radius-tl">
@@ -7,7 +11,7 @@ const Curso = () => (
         </div>
         <div className="card__data s-border s-radius-br s-radius-bl s-pxy-2">
           <h3 className="t5 s-mb-2 s-center">
-            Programación orientada a objetos con Go
+            { mayorDeEdad(persona.edad) ? "Soy mayor de edad" : "Soy un mocoso"} {/* Como no se puede usar la condicional IF, usaremos operadores ternarios ?: */}
           </h3>
           <div className="s-mb-2 s-main-center">
             <div className="card__teacher s-cross-center">
@@ -16,7 +20,7 @@ const Curso = () => (
                   <img src="https://www.debate.com.mx/__export/1571691199360/sites/debate/img/2019/10/21/belinda_luce_nuevo_rostrox_sus_fans_dicen_que_algo_se_operx_.jpg_423682103.jpg" alt="Beli" />
                 </div>
               </div>
-              <span className="small">Belinda</span>
+                <span className="small">{persona.nombre + " " + persona.apellido}</span>
             </div>
           </div>
           <div className="s-main-center">
