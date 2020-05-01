@@ -18,20 +18,14 @@ const App = () => (
     </div>
     <div className="ed-grid m-grid-3">
       <Curso 
-        title="React Desde Cero"
-        image="https://edteam-media.s3.amazonaws.com/courses/original/5eaaec0b-fa78-4f48-94b6-61b757e1f5fa.png"
-        price= "20 usd"
-        profesor="Juan Manuel" />
+        price= {200}
+        profesor ="Juan Manuel" />
+      <Curso />
       <Curso 
-        title="Firebase con Android"
-        image="https://edteam-media.s3.amazonaws.com/courses/original/edbb2e26-eafa-4e9e-82eb-13b65714ae33.png"
-        price= "30 usd"
-        profesor="Gabriela" />
-      <Curso 
-        title="Go Desde Cero"
-        image="https://edteam-media.s3.amazonaws.com/courses/original/91e149d0-961a-4594-a8ff-0a625be9cdd2.png"
-        price= "40 usd"
-        profesor="José Abel" />
+        title = "Go Desde Cero"
+        image = "https://edteam-media.s3.amazonaws.com/courses/original/91e149d0-961a-4594-a8ff-0a625be9cdd2.png"
+        price = {1000}
+        profesor = "José Abel" />
     </div>
   </Fragment>
 )
