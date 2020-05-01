@@ -2,6 +2,34 @@ import React, {Fragment} from 'react';
 import "./styles/styles.scss";
 import Curso from './Curso'
 
+const cursos = [
+  {
+    "title": "React desde cero",
+    "image": "https://edteam-media.s3.amazonaws.com/courses/original/5eaaec0b-fa78-4f48-94b6-61b757e1f5fa.png",
+    "price": 50,
+    "profesor": "Beto Quiroga"
+  },
+  {
+    "title": "Drupal desde cero",
+    "image": "https://edteam-media.s3.amazonaws.com/courses/original/1a5bea38-0c7f-4ca1-ac3f-1710b1b7a5a3.png",
+    "price": 40,
+    "profesor": "Beto Quiroga"
+  },
+  {
+    "title": "Go desde cero",
+    "image": "https://edteam-media.s3.amazonaws.com/courses/original/91e149d0-961a-4594-a8ff-0a625be9cdd2.png",
+    "price": 30,
+    "profesor": "Alexys Lozada"
+  },
+  {
+    "title": "HTML desde cero",
+    "image": "https://edteam-media.s3.amazonaws.com/blogs/smaller/03928ceb-64e7-4336-b18c-6f65a751de6e.jpg",
+    "price": 20,
+    "profesor": "Alvaro Felipe"
+  }
+]
+
+
 const App = () => (
   <Fragment>
     <div className="main-banner img-container l-section" id="main-banner">
@@ -17,15 +45,12 @@ const App = () => (
       </div>
     </div>
     <div className="ed-grid m-grid-3">
-      <Curso 
-        price= {200}
-        profesor ="Juan Manuel" />
-      <Curso />
-      <Curso 
-        title = "Go Desde Cero"
-        image = "https://edteam-media.s3.amazonaws.com/courses/original/91e149d0-961a-4594-a8ff-0a625be9cdd2.png"
-        price = {1000}
-        profesor = "José Abel" />
+      {
+        cursos.map( curso => <Curso title={curso.title}
+                                    image={curso.image}
+                                    price={curso.price}
+                                    profesor={curso.profesor} />)
+      }
     </div>
   </Fragment>
 )
