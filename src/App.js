@@ -7,7 +7,7 @@ import CourseGrid from './CourseGrid'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Course from './Course'
 import MainMenu from './MainMenu'
-// Comentario de Prueba
+
 const App = () => (
   <Router>
     <MainMenu />
