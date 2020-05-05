@@ -29,7 +29,7 @@ class Formulario extends Component {
     render() {
         return (
             <div className="ed-grid">
-                <h1>Formulario</h1>
+                <h1>Formulario {this.props.name}</h1>
                 <form  id="elemento">
                     <div className="ed-grid m-grid-2">
                         <div className="form__item">
@@ -49,10 +49,16 @@ class Formulario extends Component {
             </div>
         )
     }
-
+    // Fase de MONTAJE
     componentDidMount() {
         let elemento = document.getElementById("elemento")
         console.log(elemento)
+    }
+    // Fase de ACTUALIZACIÓN
+    componentDidUpdate(prevProps, prevState) {
+        console.log(prevProps)
+        console.log(prevState)
+        console.log("-----------------------------------")
     }
 }
 
