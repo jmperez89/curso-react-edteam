@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Course from './Pages/Course'
 import MainMenu from './Organisms/MainMenu'
 import Home from './Pages/Home'
+import Users from './Pages/Users'
 
 const App = () => (
   <Router>
@@ -14,6 +15,7 @@ const App = () => (
       <Route path="/" exact component={Home}/>
       <Route path="/cursos/:id" component={Course}/>
       <Route path="/cursos" component={CourseGrid}/>
+      <Route path="/usuarios" component={Users}/>
       <Route path="/formulario" component={() => <Form name="Pagina de Contacto"/>}/>
       <Route component={() => (
         <div className="ed-grid">
