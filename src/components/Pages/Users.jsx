@@ -13,7 +13,12 @@ class Users extends Component {
 
     componentDidMount() {
         fetch('https://jsonplaceholder.typicode.com/users', {method: 'get'})
-                .then(response => console.log(response))
+                .then(response => response.json())
+                .then(json => {
+                    this.setState({
+                        users: json
+                    })
+                })
     }
 
     render() {
@@ -21,7 +26,7 @@ class Users extends Component {
         return (
             <div className="ed-grid">
                 <h1>Usuarios</h1>
-                <div>
+                <div className="ed-grid s-grid-2 m-grid-3 l-grid-4">
                     {
                     users.map(u => ( <UserCard 
                         key={u.id} 
