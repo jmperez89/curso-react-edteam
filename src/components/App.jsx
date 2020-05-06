@@ -1,18 +1,17 @@
 import React from 'react'
-import './styles/styles.scss'
-import Banner from './Banner'
-import Form from './Form'
-import CourseGrid from './CourseGrid'
+import '../styles/styles.scss'
+import Form from './Pages/Form'
+import CourseGrid from './Organisms/CourseGrid'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Course from './Course'
-import MainMenu from './MainMenu'
-// Se creo un comentario
-// Se agregó un segundo comentario
+import Course from './Pages/Course'
+import MainMenu from './Organisms/MainMenu'
+import Home from './Pages/Home'
+
 const App = () => (
   <Router>
     <MainMenu />
     <Switch>
-      <Route path="/" exact component={Banner}/>
+      <Route path="/" exact component={Home}/>
       <Route path="/cursos/:id" component={Course}/>
       <Route path="/cursos" component={CourseGrid}/>
       <Route path="/formulario" component={() => <Form name="Pagina de Contacto"/>}/>
@@ -26,4 +25,4 @@ const App = () => (
   </Router>
 )
 
-export default App;
+export default App
