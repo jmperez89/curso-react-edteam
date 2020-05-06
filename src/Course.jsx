@@ -60,7 +60,7 @@ const Course = ({ match }) => {
                         <p className="m-cols-2">{cursoActual.profesor}</p>
                     </>
                     ) :
-                    <h1>El curso no Existe</h1>
+                    <h3>El curso no Existe</h3>
             }
         </div>
     )
