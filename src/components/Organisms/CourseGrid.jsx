@@ -23,17 +23,20 @@ class CourseGrid extends Component {
         const { courses } = this.state
         return (
             <div className="ed-grid m-grid-3">
-                { courses.map(c => (
-                <CourseCard
-                    key={c.id}
-                    id={c.id}
-                    title={c.titulo}
-                    image={c.image}
-                    price={c.price}
-                    profesor={c.profesor}
-        
-                />
-                )) }
+                { courses.length === 0 
+                ? <h1 className="t3">Cargando...</h1>
+                : courses.map(c => (
+                    <CourseCard
+                        key={c.id}
+                        id={c.id}
+                        title={c.titulo}
+                        image={c.image}
+                        price={c.price}
+                        profesor={c.profesor}
+            
+                    />
+                    )) 
+                }
             </div>
         )
     }
