@@ -4,9 +4,7 @@ import withLoader from '../HOC/withLoader'
 
 const CourseGrid = ({courses}) => (
     <div className="ed-grid m-grid-3">
-        { courses.length === 0
-        ? <h1 className="t3">Cargando...</h1>
-        : courses.map(c => (
+        { courses.map(c => (
             <CourseCard
                 key={c.id}
                 id={c.id}
@@ -19,4 +17,4 @@ const CourseGrid = ({courses}) => (
     </div>
 )
 
-export default  withLoader("courses")(CourseGrid)
+export default  withLoader("courses") (CourseGrid)
