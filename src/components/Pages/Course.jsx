@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react"
-import Axios from 'axios'
+import useCourse from '../CustomHooks/useCourse'
+
 const Course = ({ match }) => {
 
-    const [state, setState] = useState({})
     const [comment, setComment] = useState("Sin comentarios")
 
-    useEffect(() => {
-        Axios.get(`https://my-json-server.typicode.com/jmperez89/json-db/courses/${match.params.id}`)
-            .then(response => setState(response.data))
-    }, [])
+    const state = useCourse(match.params.id)
 
     const myComment = e => {
         setComment(e.target.value)
