@@ -8,6 +8,7 @@ const useCourse = id => {
     useEffect(() => {
         Axios.get(`https://my-json-server.typicode.com/jmperez89/json-db/courses/${id}`)
             .then(response => setState(response.data))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return state
